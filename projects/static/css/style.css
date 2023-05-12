@@ -1,0 +1,20 @@
+.main-popup{
+    width:500px;
+    background:transparent;
+    border-radius:6px;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0.1);
+    text-align:centre;
+    padding:0 30px 30px;
+    colors:#333;
+    transition:transform 0.4s,top 0.4s;
+
+}
+
+.mainpopup img{
+    width:200px;
+
+
+}

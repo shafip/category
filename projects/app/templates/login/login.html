@@ -1,0 +1,40 @@
+
+{% extends 'home.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+
+<form action="" method="POST">
+      {% csrf_token %}
+<section class="vh-100" style="">
+  <div class="container py-5 h-100">
+    <div class="row d-flex justify-content-center align-items-center h-100">
+      <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+        <div class="card shadow-2-strong" style="border-radius: 1rem;">
+          <div class="card-body p-5 text-center">
+
+            <h3 class="mb-5">Sign in</h3>
+
+            <div class="form-outline mb-4">
+                <placeholder>UserName</placeholder>
+              {{ form.username }}<br>
+
+            </div>
+
+            <div class="form-outline mb-4">
+                              <label class="form-label" >Password</label>
+
+              {{ form.password }}<br>
+            </div>
+                 <button class="btn btn-primary btn-lg btn-block" type="submit">Login</button>
+            <!-- Checkbox -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</form>
+{% endblock %}</title>

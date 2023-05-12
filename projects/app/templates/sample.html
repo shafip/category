@@ -1,0 +1,45 @@
+<script>
+    function btnok(id)
+
+      {
+        alert(id)
+        Swal.fire({
+  title: 'Are you sure?',
+  text: "You won't be able to revert this!",
+  icon: 'warning',
+  showCancelButton: true,
+  confirmButtonColor: '#3085d6',
+  cancelButtonColor: '#d33',
+  confirmButtonText: 'Yes, delete it!'
+}).then((result) => {
+  if (result.isConfirmed) {
+    alert(id)
+    wind
+    Swal.fire(
+      'Deleted!',
+      'Your file has been deleted.',
+      'success'
+    )
+  }
+})
+   }
+
+</script>
+<script>
+    const searchForm = document.querySelector('#search-form');
+const searchResults = document.querySelector('#search-results');
+
+searchForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const query = searchForm.querySelector('input[Name="q"]').value;
+    fetch(`search/?q=${query}`)
+        .then(response => response.json())
+        .then(data => {
+            let html = '';
+            data.results.forEach(result => {
+                html += `<p>${result.Name}</p>`;
+            });
+            searchResults.innerHTML = html;
+        });
+});
+</script>
